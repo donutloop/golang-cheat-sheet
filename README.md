@@ -22,3 +22,23 @@ Go’s race detector is available from the Go tools via -race. go test also supp
 ```bash
 go test -race
 ```
+
+### Benchmarking
+
+
+The command below will trigger all benchmarks in your project.
+
+```bash
+
+go test -bench=.
+
+```
+
+The command below will trigger just one benchmark in your project.
+
+```bash
+
+go test -bench={{Name of Benchmark}}
+
+```
+
