@@ -44,7 +44,7 @@ go test -bench={{Name of Benchmark}}
 
 ### GO 1.8 Features
 
-You can then build a plugin that command below which will give you a shared object (.so) file`
+You can build a plugin that command below which will give you a shared object (.so) file`
 
 ```bash
 go build -buildmode=plugin
