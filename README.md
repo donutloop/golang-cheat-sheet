@@ -24,7 +24,7 @@ go test -race
 ```
 How to separate go tests
 
-Mark your _test.go files with build constraints:
+Mark your _test.go files with [**build constraints**][0]:
 
 For instance:
 ```go
@@ -33,8 +33,7 @@ For instance:
 package logger_test
 
 ```
-Now you can execute your integration tests with the tags flag:
-When you don't pass tags only all other tests will be executed!
+Now you can execute your integration tests with the tags flag (When you don't pass tags only all other tests will be executed!)
 
 ```bash
 go test --tags=integration
@@ -67,3 +66,4 @@ You can build a plugin with that command below which will give you a shared obje
 go build -buildmode=plugin
 ```
 
+[0]: https://golang.org/pkg/go/build/#hdr-Build_Constraints
