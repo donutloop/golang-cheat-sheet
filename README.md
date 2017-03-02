@@ -22,6 +22,23 @@ Go’s race detector is available from the Go tools via -race. go test also supp
 ```bash
 go test -race
 ```
+How to separate go tests
+
+Mark your _test.go files with build constraints:
+
+For instance:
+```go
+// +build integration
+
+package logger_test
+
+```
+Now you can execute your integration tests with the tags flag:
+When you don't pass tags only all other tests will be executed!
+
+```bash
+go test --tags=integration
+```
 
 ### Benchmarking
 
