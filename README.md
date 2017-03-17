@@ -58,6 +58,14 @@ go test -bench={{Name of Benchmark}}
 
 ```
 
+### Glide and Testing
+
+The command below will execute all project test 
+
+```bash
+go test $(glide novendor) -v ./.
+```
+
 ### GO 1.8 Features
 
 You can build a plugin with that command below which will give you a shared object (.so) file`
