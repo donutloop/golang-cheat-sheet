@@ -22,7 +22,7 @@ Go’s race detector is available from the Go tools via -race. go test also supp
 ```bash
 go test -race
 ```
-How to separate go tests
+How to separate go tests by build tag
 
 Mark your _test.go files with [**build constraints**][0]:
 
@@ -58,13 +58,30 @@ go test -bench={{Name of Benchmark}}
 
 ```
 
-### Glide and Testing
+### Go Mod 
 
-The command below will execute all project test 
+#### Replace package online with local path
+
+Example:
+
+```go
+module github.com/acme/foo
+
+go 1.12
+
+require (
+	github.com/acme/bar v1.0.0
+)
+
+replace github.com/acme/bar => /path/to/local/bar
+```
+
+Command:
 
 ```bash
-go test $(glide novendor) -v ./.
+go mod edit -replace github.com/acme/bar=/path/to/local/bar
 ```
+
 
 ### GO 1.8 Features
 
