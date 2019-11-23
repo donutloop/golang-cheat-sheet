@@ -82,6 +82,12 @@ Command:
 go mod edit -replace github.com/acme/bar=/path/to/local/bar
 ```
 
+#### Resolve checksum mismatch
+
+```bash
+go clean -modcache 
+go mod tidy
+```
 
 ### GO 1.8 Features
 
